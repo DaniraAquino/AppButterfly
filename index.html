@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterfly Care - Página Principal</title>
+    <link rel="icon" href="/img/Icon App.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff3f5;
+            color: #5a5a5a;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-top: 6px solid #e91e63;
+            text-align: center;
+        }
+        .logo-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            font-size: 32px;
+            color: #e91e63;
+            font-weight: bold;
+        }
+        .introduction {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 20px 0;
+            color: #5a5a5a;
+        }
+        .tab-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .tab {
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+            color: #e91e63;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .tab.active {
+            border-bottom: 3px solid #e91e63;
+        }
+        .content-section {
+            display: none;
+            text-align: left;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+        .hashtag {
+            color: #e91e63;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+        p, ul {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #5a5a5a;
+            font-size: 14px;
+        }
+        footer img {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            document.getElementById(sectionId + '-tab').classList.add('active');
+        }
+        window.onload = function() {
+            showSection('privacy');
+        };
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <!-- Logo and Introduction Section -->
+    <div class="logo-section">
+        <div class="logo">BUTTERFLY CARE</div>
+        <p class="introduction">
+            Aplicación móvil con Realidad Aumentada para la detección temprana del cancer de mama
+        </p>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="tab-container">
+        <div class="tab active" id="privacy-tab" onclick="showSection('privacy')">Política de Privacidad</div>
+        <div class="tab" id="deletion-tab" onclick="showSection('deletion')">Solicitud de Eliminación de Cuenta</div>
+    </div>
+
+    <!-- Privacy Policy Section -->
+    <div class="content-section" id="privacy">
+        <h4>Política de Privacidad</h4>
+        <p><strong>Bienvenido a Butterfly Care.</strong> Esta aplicación fue desarrollada con el objetivo de brindar información sobre la anatomía de la mama, los tipos de cáncer de mama y los pasos para realizar una autoexploración. Es importante destacar que esta aplicación es informativa y no ofrece diagnósticos médicos. Recomendamos a los usuarios que consulten a profesionales de la salud para cualquier inquietud médica.</p>
+        
+        <h4>1. Información que Recopilamos</h4>
+        <p>Para mejorar la experiencia y efectividad de Butterfly Care, recopilamos ciertos datos personales de los usuarios que crean una cuenta en la aplicación. La información que solicitamos incluye:</p>
+        <ul>
+            <li>Nombre de usuario</li>
+            <li>Correo electrónico</li>
+            <li>Contraseña (almacenada de forma segura y cifrada)</li>
+        </ul>
+        <p>Estos datos son recopilados exclusivamente para analizar la experiencia de usuario y la efectividad de la aplicación, con el fin de realizar mejoras futuras. No utilizamos esta información con fines de marketing ni para identificar a los usuarios de manera individual.</p>
+        
+        <h4>2. Uso de la Información</h4>
+        <p>Los datos recopilados se utilizan para:</p>
+        <ul>
+            <li>Realizar análisis estadísticos sobre la experiencia y efectividad de la aplicación.</li>
+            <li>Detectar áreas de mejora en la aplicación para futuras actualizaciones.</li>
+            <li>Asegurar una experiencia personalizada y mejorar la funcionalidad general de la aplicación.</li>
+        </ul>
+        
+        <h4>3. Protección de Datos Personales</h4>
+        <p>En Butterfly Care, implementamos medidas de seguridad técnicas y administrativas para proteger los datos personales de los usuarios, incluyendo el almacenamiento cifrado de contraseñas. No compartimos, vendemos ni intercambiamos los datos personales de los usuarios con terceros.</p>
+        
+        <h4>4. Realidad Aumentada y Modelos 3D</h4>
+        <p>La aplicación utiliza tecnología de realidad aumentada (AR) para mostrar modelos anatómicos en 3D sobre la anatomía de la mama y explicar los tipos de cáncer de mama. Estos modelos y animaciones son puramente informativos y no sustituyen el consejo médico profesional.</p>
+        
+        <h4>5. Limitaciones de Responsabilidad</h4>
+        <p>Butterfly Care es una herramienta educativa y no debe interpretarse como un sustituto del asesoramiento médico profesional. Los usuarios deben consultar a un médico para recibir atención personalizada.</p>
+        
+        <h4>6. Seguridad de los Datos</h4>
+        <p>Nos comprometemos a proteger la privacidad de nuestros usuarios. Los datos de inicio de sesión se almacenan de forma cifrada y se protegen contra accesos no autorizados.</p>
+        
+        <h4>7. Cambios en esta Política de Privacidad</h4>
+        <p>Podemos actualizar esta política de privacidad periódicamente y notificaremos cualquier cambio significativo en esta página.</p>
+        
+        <h4>8. Contacto</h4>
+        <p>Si tienes alguna pregunta sobre esta política de privacidad, puedes contactarnos en <a href="mailto:daniraaquino40@gmail.com">daniraaquino40@gmail.com</a>.</p>
+    </div>
+
+    <!-- Account Deletion Request Section -->
+    <div class="content-section" id="deletion">
+        <h4 class="highlight">Solicitud de Eliminación de Cuenta</h4>
+        <p>Si deseas eliminar tu cuenta y todos los datos asociados de Butterfly Care sigue estos pasos:</p>
+        <ol>
+            <li><span class="highlight">Envía un correo electrónico a:</span> <a href="mailto:daniraaquino40@gmail.com">daniraaquino40@gmail.com</a> con el asunto “Solicitud de eliminación de cuenta”.</li>
+            <li><span class="highlight">Incluye en el correo los siguientes datos:</span>
+                <ul>
+                    <li>Nombre completo asociado a la cuenta.</li>
+                    <li>Dirección de correo electrónico registrada en la cuenta.</li>
+                </ul>
+            </li>
+            <li><span class="highlight">Confirma tu solicitud:</span> Nuestro equipo responderá para confirmar la solicitud de eliminación. En caso de necesitar información adicional, nos pondremos en contacto.</li>
+            <li><span class="highlight">Tiempo de procesamiento:</span> La eliminación de tu cuenta puede tomar hasta 3 días tras la confirmación.</li>
+        </ol>
+        <p class="note">Nota: Al eliminar tu cuenta, se borrarán permanentemente todos los datos asociados. Esta acción no se puede deshacer.</p>
+        <div class="hashtag">#PrevenirEsVivir</div>
+    </div>
+    <footer>
+        <img src="/img/Icon App.ico" alt="Ícono de Butterfly Care"> Butterfly Care © 2024
+    </footer>
+</div>
+
+</body>
+</html>
